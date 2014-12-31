@@ -1,0 +1,45 @@
+.image-container img{
+	width: 100%;
+}
+
+div.container {
+	width:100%;
+	background-color: rgb(169, 209, 142);
+	border-bottom: 1px solid rgb(82, 127, 52);
+	text-align: center;
+}
+
+div.container.jumbotron {
+	width:100%;
+	background-color: rgb(226, 240, 217);
+	border: 0px;
+}
+
+div.navbar.navbar-default h1 {
+	color: rgb(8, 8, 8);
+}
+
+
+div.col-md-2 div.row {
+	text-align: center;
+	background-color: rgb(169, 209, 142);
+	padding-bottom: 5%;
+	width: 100%;
+	border: 1px solid rgb(82, 127, 52);
+	margin-left: 5%;
+	padding-bottom: 15%;
+	margin-bottom: 10%;
+	text-align: center;
+}
+
+div.col-md-2 div.row div.navbar-header {
+	width: 82%;
+	background-color: rgb(218, 166, 0);
+	border: 1px solid rgb(131, 99, 0);
+	margin-bottom: 1px;
+	margin-left: 9%;
+}
+
+div.col-md-2 div.row hr {
+	width: 82%;
+}
