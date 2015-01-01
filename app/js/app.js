@@ -1,3 +1,3 @@
 'use strict';
 
-var musicApp = angular.module('musicApp', []);
+var adsApp = angular.module('adsApp', []);

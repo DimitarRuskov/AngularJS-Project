@@ -1,6 +1,6 @@
 'use strict';
 
-musicApp.controller('EditArtistController',
+adsApp.controller('EditArtistController',
 	function EditArtistController($scope) {
 
 		$scope.cancel = cancel;
