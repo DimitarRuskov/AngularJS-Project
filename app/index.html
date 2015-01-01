@@ -14,6 +14,7 @@
 	</div>
 
 	<div class="container jumbotron">
+
 		<!--Leftside Divs-->
 		<div class="col-md-2">
 			<div class="row">
@@ -37,15 +38,82 @@
 				</div>
 			</div>
 		</div>
+
 		<!--Ads Details-->
+		<div class="col-md-6">
+			<div class="row">
+				<div class="details-container">
+					<p><strong>IPhone 4 rly hot offer yo</strong> <span>12-Jul-2013</span></p>
+        			<div class="col-md-4 image-container">
+						<img ng-src="{{ album.image }}" src="https://www.google.bg/images/srpr/chrome_ntp_white_logo2.png" alt="{{ album.name }}" >
+					</div>
+					<div class="col-md-6">
+						<div class="description">
+							<p>
+	        					<strong>
+	        						I have iPhone 4S 16GB for sale. Good price. Like a new. Please call me in the evenings or at weekends.
+								</strong>
+        					</p>
+						</div>
+        				
+        				<fieldset>
+			              <div class="form-group">
+			                <label for="name" class="col-lg-2 control-label">Name</label>
+			                <div class="col-lg-10">
+			                  <input type="text" class="form-control form-validation" id="name" value="Gancho" readonly>
+			                </div>
+			              </div>
+			              <div class="form-group">
+			                <label for="image" class="col-lg-2 control-label email-holder">Email</label>
+			                <div class="col-lg-10">
+			                  <input type="text" class="form-control form-validation" id="image" value="pesho@abv.bg" readonly>
+			                </div>
+			              </div>
+			              <div class="form-group">
+			                <label for="date" class="col-lg-2 control-label">Tel.</label>
+			                <div class="col-lg-10">
+			                  <input type="text" required="required" class="form-control form-validation" value="+359 099 909 990" readonly>
+			                </div>
+			              </div>
+			            </fieldset>
+        			</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Rightside Divs-->
+		<div class="col-md-2">
+			<div class="row">
+				<h2>Categories</h2>
+				<hr>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">All</a>
+				</div>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Cars</a>
+				</div>
+			</div>
+			<div class="row">
+				<h2>Towns</h2>
+				<hr>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Plovdiv</a>
+				</div>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Sofia</a>
+				</div>
+			</div>
+		</div>
 
   	</div>
-
+	
   	
-
-	<div class="container">
-        <p class="text-muted">© 2014 by Software University Foundation, No Rights Reserved</p>
-  	</div>
+	<footer>
+		<div class="container">
+        	<p class="text-muted">© 2014 by Software University Foundation, No Rights Reserved</p>
+  		</div>
+	</footer>
+	
 	<script src="lib/jquery.min.js"></script>
 	<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="lib/angular/angular.js"></script>
