@@ -1,78 +1,36 @@
-.image-container img{
+#ul {
+	list-style: none;
+}	
+
+img {
 	width: 100%;
-}
-
-div.container {
-	width: 100%;
-	background-color: rgb(169, 209, 142);
-	border-bottom: 1px solid rgb(82, 127, 52);
-	text-align: center;
-}
-
-div.container.jumbotron {
-	width: 100%;
-	background-color: rgb(226, 240, 217);
-	border: 0px;
-	margin-bottom: 0px;
-}
-
-div.navbar.navbar-default h1 {
-	color: rgb(8, 8, 8);
-}
-
-div.row {
-	text-align: center;
-	background-color: rgb(169, 209, 142);
-	padding-bottom: 5%;
-	width: 100%;
-	border: 1px solid rgb(82, 127, 52);
-	margin-left: 0%;
-	padding-bottom: 15%;
-	margin-bottom: 10%;
-	text-align: center;
-	box-shadow: 1px 1px 1px #888888;
-}
-
-div.col-md-2 {
-	margin:0;
-}
-
-div.col-md-2 div.row div.navbar-header {
-	width: 78%;
-	background-color: rgb(218, 166, 0);
-	border: 1px solid rgb(131, 99, 0);
-	margin-bottom: 1px;
-	margin-left: 11%;
-}
-
-div.col-md-2 div.row div.navbar-header a {
-	color: black;
-}
-
-div.col-md-2 div.row hr {
-	width: 78%;
-	color: black;
-}
-
-div.description {
-	background-color: rgb(197, 224, 180);
+	height: auto;
 	border: 1px dotted black;
 }
 
-div.details-container {
-	margin-top: 5%;
+div.credentials {
+	background-color:  rgb(197, 224, 180);
+	border: 1px dotted black;
+	border-radius: 4px;
 }
 
-div.col-md-6 div.row div.details-container div.col-md-6 {
-	margin-left: 10%;
+div.container.well div.row div.row {
+	padding-bottom: 3%;
 }
 
-fieldset div.form-group div.col-lg-10 input.form-control {
-	background-color: rgb(197, 224, 180);
-	color: black;
+div.container.well {
+	background-color: rgb(169, 209, 142);
 }
 
-fieldset div.form-group div.col-lg-10 input.email-holder {
+div.email a{
+	text-decoration: underline;
 	color: blue;
-	text-decoration: line-through;
+}
+
+.panel-primary {
+	background-color: rgb(169, 209, 142);
+}
+
+.all {
+	width: 70%;
 }
