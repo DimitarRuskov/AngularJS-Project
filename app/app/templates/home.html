@@ -1,0 +1,81 @@
+
+<ul class="ads">
+    <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
+        <div class="container well">
+            <div class="row">
+                <div class="col-md-7">
+                    <h3 class="pull-left">
+                        {{ ad.title }}
+                    </h3>
+                </div>
+                <div class="col-md-5">
+                    <span class="pull-right">
+                        <strong>{{ ad.date | date: 'd-MMM-yyyy'}}</strong>
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="image-container" ng-if='ad.imageDataUrl'>
+                        <img src="" ng-src="{{ ad.imageDataUrl }}" alt="NO IMAGE" />
+                    </div>          
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-body credentials">
+                                {{ ad.text}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            
+                            <div class="panel-body">
+                                <strong>Name: </strong> 
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="panel-body credentials">
+                                {{ ad.ownerName }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="panel-body">
+                                <strong>Email: </strong> 
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="panel-body credentials email">
+                                <a href="{{ ad.ownerEmail }}">{{ ad.ownerEmail }}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="panel-body">
+                                <strong>Tel. </strong> 
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="panel-body credentials">
+                                {{ ad.ownerPhone }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<div ng-if="ads.ads.length==0" class="box no-data">
+    Sorry :( No ads found!
+</div>
+
+<pagination total-items="ads.numItems" ng-model="adsParams.startPage"
+  items-per-page="adsParams.pageSize" ng-change="reloadAds()"
+  max-size="9" boundary-links="true">
+</pagination>

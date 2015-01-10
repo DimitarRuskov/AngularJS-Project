@@ -1,0 +1,8 @@
+<div class="nav navbar-default">
+	Ads<span ng-if="pageTitle"> &ndash; {{pageTitle}}</span>
+
+	<div ng-if="authService.isLoggedIn()" class="user-area">
+	  <span>{{authService.getCurrentUser().username}}</span>
+	  <a ng-click="logout()" class="link">Logout</a>
+	</div>
+</div>

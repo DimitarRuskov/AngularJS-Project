@@ -1,0 +1,94 @@
+<form name="newAdvertForm" >
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 publish-ad-form">
+      <fieldset>
+        <div class="col-lg-10">
+          <div class="row">
+            <div class="col-lg-5">
+            
+            </div>
+            <div class="col-lg-5">
+              <legend><strong>Publish New Ad</strong></legend>
+            </div>
+            <div class="col-lg-2">
+              
+            </div>
+          </div>
+          <div class="row">
+            
+            <div class="col-md-8 publish-ad">
+              <div class="row">
+                <div class="col-md-2">
+                  <label for="inputTitle" class="control-label" ng-model="advert.title">Title:</label>
+                </div>
+                <div class="col-md-10">  
+                  <input type="text" class="form-control" id="inputTitle" placeholder="Title" required="required" ng-model='advert.title'/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <label for="inputText" class="control-label">Text:</label>
+                </div>
+                <div class="col-md-10">
+                  <textarea id="inputText" class="form-control" cols="30" rows="5" placeholder="Text" required="required" ng-model='advert.text'></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="image-container">
+                <img src="" ng-src="{{url}}" alt="No Image Yet" />
+              </div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-2">
+                  <label for="inputImage" class="control-label">Image:</label>
+                </div>
+                <div class="col-md-10">  
+                  <input type="file" class="form-control" id="inputImage" placeholder="Image" ng-model="url" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label for="category" class="control-label">Category:</label>
+            </div>
+            <div class="col-md-10">
+              <select id="category" ng-model="advert.categoryId">
+                <option value="null" selected>(None)</option>
+                <option ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label for="category" class="control-label">Town:</label>
+            </div>
+            <div class="col-md-10">
+              <select id="category" ng-model="advert.townId">
+                <option value="null" selected="selected">(None)</option>
+                <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="publish-buttons">
+                <button class="btn btn-primary" ng-click="cancel()">Cancel</button>
+                <button class="btn btn-default" ng-click="saveAdvert(advert, newAdvertForm)">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</form>
