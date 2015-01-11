@@ -1,0 +1,107 @@
+<div class="row">
+	<div class="col-md-6">
+		<form name="updateForm">
+		  <div class="row">
+		    <div class="col-md-2"></div>
+		    <div class="col-md-8 publish-ad-form">
+		      <fieldset class="hr">
+		        <div class="col-lg-10">
+		          <div class="row header">
+		            
+		              <legend><strong>Edit Profile </strong></legend>
+		            
+		          </div>
+		        </div>
+		      </fieldset>
+		      <fieldset class="edit-input">
+		      	<div class="row">
+		      		<div class="col-md-2">
+		      			
+		      		</div>
+		            <div class="col-md-10"><label for="name" class="pull-left">Name:</label></div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12"><input type="text" id="name" class="form-control" required value=" {{ profile.name }} " ng-model="profile.name"/></div>
+		        </div>
+		        <div class="row">
+		        	<div class="col-md-2">
+		      			
+		      		</div>
+		            <div class="col-md-10"><label for="email" class="pull-left">Email:</label></div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12"><input type="text" id="email" class="form-control" value=" {{ profile.email }} " ng-model="profile.email" required /></div>
+		        </div>
+		        <div class="row">
+		        	<div class="col-md-2">
+		      			
+		      		</div>
+		            <div class="col-md-10"><label for="phone" class="pull-left">Phone:</label></div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12"><input type="text" id="phone" class="form-control" required value=" {{ profile.phoneNumber }} " ng-model="profile.phoneNumber" /></div>
+		        </div>
+		        <div class="row pad-top">
+		        	<div class="col-md-2"></div>
+		            <div class="col-md-4"><button class="btn btn-primary" ng-click="updateProfile(profile)">Update</button></div>
+		            <div class="col-md-5"><button class="btn btn-default" ng-click="cancel()">Cancel</button></div>
+		        </div>
+		      </fieldset>
+		    </div>
+		    <div class="col-md-2"></div>
+		  </div>
+		</form>
+	</div>
+	<div class="col-md-6">
+		<form>
+		  <div class="row">
+		    <div class="col-md-2"></div>
+		    <div class="col-md-8 publish-ad-form">
+		      <fieldset class="hr">
+		        <div class="col-lg-10">
+		          <div class="row">
+		            
+		              <legend><strong>Change Password</strong></legend>
+		          </div>
+		        </div>
+		      </fieldset>
+		      <fieldset class="edit-input">
+		      	<div class="row">
+		      		<div class="col-md-2">
+		      			
+		      		</div>
+		            <div class="col-md-10"><label for="oldPassword" class="pull-left">Old Password:</label></div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12"><input type="password" id="oldPassword" class="form-control" required /></div>
+		        </div>
+		        <div class="row">
+		        	<div class="col-md-2">
+		      			
+		      		</div>
+		            <div class="col-md-10"><label for="newPassword" class="pull-left">New Password:</label></div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12"><input type="password" id="newPassword" class="form-control"  required /></div>
+		        </div>
+		        <div class="row">
+		        	<div class="col-md-2">
+		      			
+		      		</div>
+		            <div class="col-md-10"><label for="newPassword" class="pull-left">Confirm new password:</label></div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12"><input type="password" id="newPassword" class="form-control"  required /></div>
+		        </div>
+		        <div class="row pad-top">
+		        	<div class="col-md-2"></div>
+		            <div class="col-md-4"><button class="btn btn-primary" ng-click="">Change password</button></div>
+		            <div class="col-md-5"><button class="btn btn-default" ng-click="">Cancel</button></div>
+		        </div>
+		      </fieldset>
+		    </div>
+		    <div class="col-md-2"></div>
+		  </div>
+		</form>
+	</div>
+</div>

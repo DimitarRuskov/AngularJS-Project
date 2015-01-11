@@ -28,7 +28,27 @@ app.factory('userService',
 
             publishAgainAd: function (id, success, error) {
                 // TODO
+            },
+
+            getUserProfile: function (success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/Profile',
+                    headers: authService.getAuthHeaders(),
+                };
+                $http(request).success(success).error(error);
+            },
+
+            editUserProfile: function (updatedData, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/Profile',
+                    headers: authService.getAuthHeaders(),
+                    data: updatedData
+                };
+                $http(request).success(success).error(error);
             }
+
 
         }
     }

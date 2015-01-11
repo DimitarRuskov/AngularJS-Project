@@ -85,6 +85,7 @@ ul.sidebar-menu li {
     color: black;
     font-weight: bold;
     margin-bottom: 2px;
+    color: rgb(44, 62, 80);
 }
 
 ul.sidebar-menu li:hover {
@@ -98,6 +99,7 @@ ul.sidebar-menu li.special {
 ul.sidebar-menu li.selected {
     background: rgb(44, 62, 80);
     border: 1px solid #7F6000;
+    color: white;
 }
 
 ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
@@ -224,4 +226,43 @@ div.my-add-left div.row button {
 
 div.status {
     width: 100%;
+}
+
+fieldset.hr {
+    border-bottom: 1px solid black;
+}
+
+fieldset.edit-input {
+    text-align: center;
+}
+
+fieldset.edit-input div.row input {
+    width: 70%;
+}
+
+div.pad-top {
+    margin-top: 4%;
+}
+
+div.col-md-8.publish-ad-form fieldset div div.row legend {
+    padding-left: 10%;
+    text-align: center;
+}
+
+div.reg-box {
+    font-size: 13pt;
+}
+
+header.nav-div {
+    background-color: rgb(44, 62, 80);
+    border-bottom: 5px;
+}
+
+h1.login-header {
+    text-align: center;
+    color: rgb(44, 62, 80);;
+}
+
+div.edit-input div.row div.col-md-12 input{
+    padding-left:10px;
 }
