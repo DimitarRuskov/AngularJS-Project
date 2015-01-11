@@ -27,8 +27,23 @@ app.config(function ($routeProvider) {
         controller: 'PublishController'
     });
 
+    $routeProvider.when('/user/ads', {
+        templateUrl: 'templates/user/ads/my-ads.html',
+        controller: 'MyAdsController'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );
 
 });
+
+app.run(function ($rootScope, $location, authService) {
+  $rootScope.$on('$locationChangeStart', function (event) {
+    if ($location.path().indexOf("/user/") != -1 && !authService.isLoggedIn()) {
+      // Authorization check: anonymous site visitors cannot access user routes
+      $location.path("/");
+    }
+  });
+});
+

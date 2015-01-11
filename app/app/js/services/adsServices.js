@@ -18,7 +18,6 @@ app.factory('adsService',
     }
 );
 
-
 app.factory('categoriesService',
     function ($resource, baseServiceUrl) {
         var categoriesResource = $resource(
@@ -32,7 +31,6 @@ app.factory('categoriesService',
         }
     }
 );
-
 
 app.factory('townsService',
     function ($resource, baseServiceUrl) {

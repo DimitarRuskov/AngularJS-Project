@@ -20,10 +20,10 @@
             <div class="col-md-8 publish-ad">
               <div class="row">
                 <div class="col-md-2">
-                  <label for="inputTitle" class="control-label" ng-model="advert.title">Title:</label>
+                  <label for="inputTitle" class="control-label">Title:</label>
                 </div>
                 <div class="col-md-10">  
-                  <input type="text" class="form-control" id="inputTitle" placeholder="Title" required="required" ng-model='advert.title'/>
+                  <input type="text" class="form-control" id="inputTitle" placeholder="Title" required="required" ng-model="adData.title"/>
                 </div>
               </div>
               <div class="row">
@@ -31,12 +31,12 @@
                   <label for="inputText" class="control-label">Text:</label>
                 </div>
                 <div class="col-md-10">
-                  <textarea id="inputText" class="form-control" cols="30" rows="5" placeholder="Text" required="required" ng-model='advert.text'></textarea>
+                  <textarea id="inputText" class="form-control" cols="30" rows="5" placeholder="Text" required="required" ng-model='adData.text'></textarea>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="image-container">
+              <div class="image-container image-box">
                 <img src="" ng-src="{{url}}" alt="No Image Yet" />
               </div>  
             </div>
@@ -48,7 +48,8 @@
                   <label for="inputImage" class="control-label">Image:</label>
                 </div>
                 <div class="col-md-10">  
-                  <input type="file" class="form-control" id="inputImage" placeholder="Image" ng-model="url" />
+                  <input type="file" class="form-control" id="inputImage" placeholder="Image"
+                  onchange="angular.element(this).scope().fileSelected(this)" />
                 </div>
               </div>
             </div>
@@ -61,7 +62,7 @@
               <label for="category" class="control-label">Category:</label>
             </div>
             <div class="col-md-10">
-              <select id="category" ng-model="advert.categoryId">
+              <select id="category" ng-model="adData.categoryId">
                 <option value="null" selected>(None)</option>
                 <option ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
               </select>
@@ -69,20 +70,20 @@
           </div>
           <div class="row">
             <div class="col-md-2">
-              <label for="category" class="control-label">Town:</label>
+              <label for="town" class="control-label">Town:</label>
             </div>
             <div class="col-md-10">
-              <select id="category" ng-model="advert.townId">
-                <option value="null" selected="selected">(None)</option>
+              <select id="town" ng-model="adData.townId">
+                <option value="null">(None)</option>
                 <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
-              </select>
+            </select>
             </div>
           </div>
           <div class="row">
             <div class="form-group">
               <div class="publish-buttons">
                 <button class="btn btn-primary" ng-click="cancel()">Cancel</button>
-                <button class="btn btn-default" ng-click="saveAdvert(advert, newAdvertForm)">Publish</button>
+                <button class="btn btn-default" ng-click="publishAd(adData)">Publish</button>
               </div>
             </div>
           </div>

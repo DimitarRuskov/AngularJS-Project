@@ -199,3 +199,29 @@ div.publish-ad-form {
     box-shadow: 1px 1px 1px rgba(80, 126, 50, 0.5);
     border-radius: 15px;
 }
+
+div.reg-form  p label {
+    padding-right: 20%;
+}
+
+div.my-add {
+    border-right: 1px solid black;
+}
+
+div.my-add-left {
+    padding-left: 15%;
+    text-align: center;
+    margin-top: 40%;
+}
+
+div.my-add-left div.row{
+    padding-bottom: 6%;
+}
+
+div.my-add-left div.row button {
+    width: 100%;
+}
+
+div.status {
+    width: 100%;
+}

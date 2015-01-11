@@ -1,0 +1,82 @@
+<ul class="ads">
+	<li ng-repeat="ad in myAds.ads" class="box" data-id="{{ad.id}}">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="container well my-add">
+		            <div class="row">
+		                <div class="col-md-5">
+		                	<h3 class="pull-left">
+		                        {{ ad.title }}
+		                    </h3>
+		                </div>
+		                <div class="col-md-5">
+		                    <span class="pull-right">
+		                        <strong>{{ ad.date | date: 'd-MMM-yyyy'}}</strong>
+		                    </span>
+		                </div>
+		            </div>
+		            <div class="row">
+		            	<div class="col-md-4">
+		                    <div class="image-container" ng-if='ad.imageDataUrl'>
+		                        <img src="" ng-src="{{ ad.imageDataUrl }}" alt="NO IMAGE" />
+		                    </div>          
+		                </div>
+		                <div class="col-md-8">
+                    		<div class="row">
+                    			<div class="col-md-12">
+		                            <div class="panel-body credentials">
+		                                {{ ad.text}}
+		                            </div>
+		                        </div>
+
+                    		</div>
+                    		<div class="row">
+		                        <div class="col-md-3">
+		                            
+		                            <div class="panel-body">
+		                                <strong>Category: </strong> 
+		                            </div>
+		                        </div>
+		                        <div class="col-md-9">
+		                            <div class="panel-body credentials">
+		                                {{ ad.categoryName }}
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-md-3">
+		                            <div class="panel-body">
+		                                <strong>Town: </strong> 
+		                            </div>
+		                        </div>
+		                        <div class="col-md-9">
+		                            <div class="panel-body credentials">
+		                                {{ ad.townName }}
+		                            </div>
+		                        </div>
+		                    </div>
+                    	</div>
+		            </div>
+		        </div>
+			</div>
+			<div class="col-md-2">
+				<div class="my-add-left">
+					<div class="row">
+					<h3>Status:</h3>
+					</div>
+					<div class="row">
+	                    <div class="panel-body credentials status">
+	                        {{ ad.status }}
+	                    </div>
+					</div>
+					<div class="row">
+						<button class="btn btn-primary">Deactivate</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</li>
+    
+</ul>
