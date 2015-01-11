@@ -73,7 +73,7 @@
 		            <div class="col-md-10"><label for="oldPassword" class="pull-left">Old Password:</label></div>
 		        </div>
 		        <div class="row">
-		            <div class="col-md-12"><input type="password" id="oldPassword" class="form-control" required /></div>
+		            <div class="col-md-12"><input type="password" id="oldPassword" class="form-control" ng-model="passwords.oldPassword" required /></div>
 		        </div>
 		        <div class="row">
 		        	<div class="col-md-2">
@@ -82,7 +82,7 @@
 		            <div class="col-md-10"><label for="newPassword" class="pull-left">New Password:</label></div>
 		        </div>
 		        <div class="row">
-		            <div class="col-md-12"><input type="password" id="newPassword" class="form-control"  required /></div>
+		            <div class="col-md-12"><input type="password" id="newPassword" class="form-control"  required ng-model="passwords.newPassword" /></div>
 		        </div>
 		        <div class="row">
 		        	<div class="col-md-2">
@@ -91,12 +91,12 @@
 		            <div class="col-md-10"><label for="newPassword" class="pull-left">Confirm new password:</label></div>
 		        </div>
 		        <div class="row">
-		            <div class="col-md-12"><input type="password" id="newPassword" class="form-control"  required /></div>
+		            <div class="col-md-12"><input type="password" id="newPassword" ng-model="passwords.confirmPassword" class="form-control"  required /></div>
 		        </div>
 		        <div class="row pad-top">
 		        	<div class="col-md-2"></div>
-		            <div class="col-md-4"><button class="btn btn-primary" ng-click="">Change password</button></div>
-		            <div class="col-md-5"><button class="btn btn-default" ng-click="">Cancel</button></div>
+		            <div class="col-md-4"><button class="btn btn-primary" ng-click="changePassword(passwords)">Change password</button></div>
+		            <div class="col-md-5"><button class="btn btn-default" ng-click="cancel()">Cancel</button></div>
 		        </div>
 		      </fieldset>
 		    </div>

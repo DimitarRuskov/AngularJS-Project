@@ -18,7 +18,7 @@
 		            <div class="row">
 		            	<div class="col-md-4">
 		                    <div class="image-container" ng-if='ad.imageDataUrl'>
-		                        <img src="" ng-src="{{ ad.imageDataUrl }}" alt="NO IMAGE" />
+		                        <img onerror="this.src='img/no-image.jpg'" ng-src="{{ ad.imageDataUrl }}" alt="NO IMAGE" />
 		                    </div>          
 		                </div>
 		                <div class="col-md-8">
@@ -70,7 +70,10 @@
 	                    </div>
 					</div>
 					<div class="row">
-						<button class="btn btn-primary">Deactivate</button>
+						<button class="btn btn-primary" ng-click="deactivate(ad.id)">Deactivate</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-primary" ng-click="delete(ad.id)">Delete</button>
 					</div>
 				</div>
 				

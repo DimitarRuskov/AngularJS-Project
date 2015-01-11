@@ -14,6 +14,7 @@ app.controller('EditProfileController',
 				}
 			);
 		};
+		
 		$scope.loadProfile();
 
 		$scope.cancel = function() {
@@ -29,9 +30,23 @@ app.controller('EditProfileController',
 				},
 				function error(err) {
 					notifyService.showError("Couldn't edit your profile :(", err);
-						$location.path("/user/ads");
+					$location.path("/user/ads");
 				}
 			);
+		}
+
+		$scope.changePassword = function(passwords) {
+			userService.changeUserPassword(
+				$scope.passwords,
+				function success(data) {
+					notifyService.showInfo("Successfuly edited your profile");
+					$location.path("/user/ads");
+				},
+				function error(err) {
+					notifyService.showError("Couldn't edit your profile :(", err);
+					$location.path("/user/ads");
+				}
+			)
 		}
 	}
 );

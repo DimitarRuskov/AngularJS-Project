@@ -23,7 +23,21 @@ app.factory('userService',
                 $http(request).success(success).error(error);
             },
             deactivateAd: function (id, success, error) {
-                // TODO
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders(),
+                };
+                $http(request).success(success).error(error);
+            },
+
+            deleteAd: function (id, success, error) {
+                var request = {
+                    method: 'DELETE',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders(),
+                };
+                $http(request).success(success).error(error);
             },
 
             publishAgainAd: function (id, success, error) {
@@ -45,6 +59,16 @@ app.factory('userService',
                     url: baseServiceUrl + '/api/user/Profile',
                     headers: authService.getAuthHeaders(),
                     data: updatedData
+                };
+                $http(request).success(success).error(error);
+            },
+
+            changeUserPassword: function (passwords, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ChangePassword',
+                    headers: authService.getAuthHeaders(),
+                    data: passwords
                 };
                 $http(request).success(success).error(error);
             }
